@@ -49,11 +49,18 @@ return {
 				capabilities = capabilities
 			})
 
-			-- Configuração para Clangd
+			-- Configuração para Clangd (C/C++)
 			lspconfig.clangd.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+				cmd = {
+					"clangd",
+					"--background-index",
+					"--clang-tidy",
+					"--completion-style=detailed",
+					"--header-insertion=never",
+					"--query-driver=**/gcc.exe"
+				},
 			})
-
 			-- Configuração para HTML
 			lspconfig.html.setup({
 				capabilities = capabilities,

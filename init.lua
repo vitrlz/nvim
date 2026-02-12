@@ -18,3 +18,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("vim-options")
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "dbout",
+  callback = function()
+    vim.wo.foldenable = false
+  end,
+})
+
