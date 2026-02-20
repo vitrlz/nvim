@@ -1,1 +1,6 @@
-[{"url": "mysql://root@localhost:3306/ccoa", "name": "ccoa"}]
+[
+	{"url": "mysql://root@localhost:3306/ccoa", "name": "ccoa"},
+	{"url": "mysql://root@localhost:3306/ccoaaula2", "name": "ccoaaula2"},
+	{"url": "mysql://root@localhost:3306/sprint1", "name": "sprint1"},
+	{"url": "mysql://root@localhost:3306/aula3BD", "name": "aula3BD"}
+]
