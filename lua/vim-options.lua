@@ -40,5 +40,5 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 -- Mapeia <leader>db para abrir o Dadbod UI
 vim.keymap.set('n', '<space>db', ':DBUIToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Dadbod UI' })
-
+vim.keymap.set('n', '<space>da', ':DBUIAddConnection<CR>', { noremap = true, silent = true, desc = 'Toggle Dadbod UI' })
 
