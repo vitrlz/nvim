@@ -42,3 +42,20 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.keymap.set('n', '<space>db', ':DBUIToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Dadbod UI' })
 vim.keymap.set('n', '<space>da', ':DBUIAddConnection<CR>', { noremap = true, silent = true, desc = 'Toggle Dadbod UI' })
 
+-- Atalho para limpar o arquivo Shada e resetar o histórico
+vim.keymap.set("n", "<space>cs", function()
+    local shada_path = vim.fn.expand(vim.fn.stdpath("data") .. "/shada")
+
+    -- Limpa o shada da sessão atual primeiro
+    vim.cmd("set shada=")
+
+    -- Executa o comando de deleção (Windows)
+    local success = os.execute('del /q "' .. shada_path .. '\\*"')
+
+    if success then
+        print("Arquivo Shada limpo com sucesso!")
+    else
+        print("Erro ao limpar Shada (verifique se há instâncias abertas).")
+    end
+end, { desc = "Clear Shada (Histórico)" })
+

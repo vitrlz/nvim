@@ -7,12 +7,11 @@ return {
     "muniftanjim/nui.nvim",
   },
   opts = {
-    -- 1. Personalização Geral da GUI
     window = {
       width = 30,
       position = "right",
       mappings = {
-        ["<space>"] = "none", -- Desativa o preview se incomodar
+        ["<space>"] = "none",
       },
     },
     default_component_configs = {
@@ -30,17 +29,32 @@ return {
     },
   },
   config = function(_, opts)
-    -- 2. Aplicar Cores para o Carbonfox (Fundo e Texto)
-    -- Isso garante que o fundo do Neo-tree seja igual ao do resto do editor
-    vim.api.nvim_set_hl(0, "NeoTreeNormal", { link = "Normal" })
-    vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { link = "NormalNC" })
-    vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#2a2a2a", bg = "none" }) -- Ajuste a cor da linha divisória
-
-    -- Setup inicial com as opções acima
     require("neo-tree").setup(opts)
 
-    -- Atalho (ajustado para usar a função execute recomendada)
-    vim.keymap.set('n', '<C-n>', ":Neotree filesystem reveal right toggle<CR>", { desc = "Toggle Neo-tree" })
-  end
+    vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal right toggle<CR>", { desc = "Toggle Neo-tree" })
+
+    local function fix_neotree_colors()
+      vim.api.nvim_set_hl(0, "NeoTreeNormal", { link = "Normal" })
+      vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { link = "Normal" })
+      vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#2a2a2a", bg = "none" })
+      
+      -- 1. Deixa o símbolo ~ invisível (mesma cor do fundo)
+      vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { fg = "bg", bg = "none" })
+    end
+
+    -- 2. Remove o caractere ~ definindo-o como um espaço vazio apenas no Neo-tree
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "neo-tree",
+      callback = function()
+        vim.opt_local.fillchars:append({ eob = " " })
+      end,
+    })
+
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      callback = fix_neotree_colors,
+    })
+
+    fix_neotree_colors()
+  end,
 }
 
