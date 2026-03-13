@@ -17,35 +17,7 @@ configurações e keymaps. O foco é:
 - Interface limpa
 - Experiência próxima a um IDE
 
-----------------------------------------
-2. Estrutura do Projeto
-----------------------------------------
-
-nvim/
-│
-├── init.lua
-├── lazy-lock.json
-├── lua/
-│   ├── config/
-│   │   ├── options.lua
-│   │   ├── keymaps.lua
-│   │   └── autocmds.lua
-│   │
-│   ├── plugins/
-│   │   ├── lsp.lua
-│   │   ├── completion.lua
-│   │   ├── telescope.lua
-│   │   ├── treesitter.lua
-│   │   └── ui.lua
-│   │
-│   └── core/
-│       ├── init.lua
-│       └── lazy.lua
-│
-└── README.md
-
-
-Descrição:
+---------------------------------------
 
 init.lua
 Arquivo principal que inicializa o Neovim e carrega todas as configurações.
