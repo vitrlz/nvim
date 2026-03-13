@@ -12,8 +12,10 @@ return {
       position = "right",
       mappings = {
         ["<space>"] = "none",
+        ["P"] = { "toggle_preview", config = { use_float = true } }, -- Atalho para o preview
       },
     },
+    popup_border_style = "rounded", -- Borda arredondada igual ao Telescope
     default_component_configs = {
       indent = {
         with_markers = true,
@@ -38,7 +40,12 @@ return {
       vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { link = "Normal" })
       vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#2a2a2a", bg = "none" })
       
-      -- 1. Deixa o símbolo ~ invisível (mesma cor do fundo)
+      -- Cores do Preview para combinar com o Telescope no Carbonfox
+      vim.api.nvim_set_hl(0, "NeoTreeFloatNormal", { link = "Normal" })
+      vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { fg = "#393939", bg = "none" }) -- Cor da borda do Telescope
+      vim.api.nvim_set_hl(0, "NeoTreeFloatTitle", { fg = "#78a9ff", bold = true })   -- Azul Carbonfox
+
+      -- 1. Deixa o símbolo ~ invisível
       vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { fg = "bg", bg = "none" })
     end
 
