@@ -150,11 +150,10 @@ Para atualizar plugins:
 
 Você pode modificar:
 
-lua/config/options.lua
+lua/config/vim-options.lua
 Configurações do editor
-
-lua/config/keymaps.lua
 Atalhos personalizados
 
+*o debugging.lua não ta funcionando e eu não sei arrumar
 lua/plugins/
 Adicionar ou remover plugins
