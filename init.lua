@@ -14,6 +14,9 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim" if not (vim.uv or v
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Setando o <Leader>
+vim.g.mapleader = " "
+
 -- plugins 
 require("lazy").setup("plugins")
 

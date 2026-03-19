@@ -16,9 +16,6 @@ vim.opt.number = true
 vim.keymap.set("n", "<space>o", "o<Esc>", {})
 vim.keymap.set("n", "<space>O", "O<Esc>", {})
 
--- ======================================================
--- ⚡ Ajustes para Dadbod / DBUI para evitar split minimizado
-
 -- Força o buffer dbout a abrir com altura decente
 vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter" }, {
   callback = function()

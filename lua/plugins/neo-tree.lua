@@ -39,7 +39,7 @@ return {
       vim.api.nvim_set_hl(0, "NeoTreeNormal", { link = "Normal" })
       vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { link = "Normal" })
       vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = "#2a2a2a", bg = "none" })
-      
+
       -- Cores do Preview para combinar com o Telescope no Carbonfox
       vim.api.nvim_set_hl(0, "NeoTreeFloatNormal", { link = "Normal" })
       vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { fg = "#393939", bg = "none" }) -- Cor da borda do Telescope
