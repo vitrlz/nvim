@@ -54,11 +54,12 @@ Antes de instalar esta configuração, certifique-se de ter:
 
 rm -rf ~/.config/nvim
 
-2. Clone o repositório:
+2. Clone o repositório dentro do repositorio:
+no linux ~/.config/nvim
+no windows ./appdata/local/nvim
+git clone https://github.com/vitrlz/nvim
 
-git clone https://github.com/vitrlz/nvim ~/.config/nvim
-
-3. Abra o Neovim:
+4. Abra o Neovim:
 
 nvim
 
