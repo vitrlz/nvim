@@ -13,6 +13,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim" if not (vim.uv or v
   end
 end
 vim.opt.rtp:prepend(lazypath)
+-- teste 
 
 -- Setando o <Leader>
 vim.g.mapleader = " "
