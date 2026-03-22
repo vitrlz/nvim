@@ -15,13 +15,13 @@ return {
 				carbonfox = {
 					-- Força as janelas flutuantes (Oil, Dressing, CMP) a terem profundidade
 					-- Usamos "bg1" ou "bg0" do próprio tema para evitar o erro de CSS
-					NormalFloat = { bg = "#161616" }, 
+					NormalFloat = { bg = "#161616" },
 					FloatBorder = { fg = "fg3", bg = "#161616" },
-					
+
 					-- Ajusta o menu de Autocompletar (Snippets/CMP)
 					Pmenu = { bg = "#161616" },
 					PmenuSel = { bg = "#2d2d2d", fg = "none" },
-					
+
 					-- Sincroniza o Telescope com o resto das janelas
 					TelescopeNormal = { bg = "#161616" },
 					TelescopeBorder = { fg = "fg3", bg = "#161616" },

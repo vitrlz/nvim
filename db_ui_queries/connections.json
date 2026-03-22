@@ -1,1 +1,1 @@
-[{"url": "mysql://root@localhost:3306/teste", "name": "teste"}, {"url": "mysql://root@localhost:3306/ccoaaula2", "name": "ccoaaula2"}, {"url": "mysql://root@localhost:3306/sprint1", "name": "sprint1"}, {"url": "mysql://root@localhost:3306/aula4ccoa", "name": "aula4ccoa"}, {"url": "mysql://root@localhost:3306/projetoPi", "name": "projetoPi"}, {"url": "mysql://root@localhost:3306/sprint2", "name": "sprint2"}, {"url": "mysql://root@localhost:3306/aula3BD", "name": "aula3BD"}]
+[{"url": "mysql://root@localhost/sprint2", "name": "sprint2"}]
