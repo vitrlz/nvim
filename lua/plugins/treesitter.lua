@@ -10,6 +10,9 @@ return {
 			indent = {
 				enable = true,
 			},
+			matchup = {
+				enable = true, -- ativa o módulo de matching
+			},
 		}
 	end
 }

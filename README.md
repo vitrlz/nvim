@@ -57,12 +57,11 @@ rm -rf ~/.config/nvim
 2. Clone o repositório dentro do repositorio:
 no linux ~/.config/nvim
 no windows ./appdata/local/nvim
-git clone https://github.com/vitrlz/nvim
-
+git clone https://github.com/vitrlz/nvim 
 4. Abra o Neovim:
 
 nvim
-
+bigger 
 Os plugins serão instalados automaticamente na primeira execução.
 
 ----------------------------------------
@@ -88,7 +87,6 @@ Interface
 - lualine
 - bufferline
 - alpha-nvim
-
 Git
 - gitsigns
 
